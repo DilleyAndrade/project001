@@ -7,6 +7,7 @@ export default function Home() {
     <div className="flex bg-bgLight dark:bg-bgDark">
       <Header />
       <MainPage />
+      
     </div>
   )
 }

@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header>
-      <div className="bg-menuLight dark:bg-menuDark w-60 h-screen flex  flex-col py-7 justify-between items-center">
+      <div className="bg-menuLight dark:bg-menuDark w-60 h-screen flex  flex-col py-7 justify-between items-center fixed z-10 left-0">
         <div className="bg-middleLight dark:bg-middleDark w-28 h-28 rounded-xl flex items-center justify-center">
           <Image src="/logo.png" height={100} width={100} alt="Logo Dilley Anndrade"/>
         </div>
