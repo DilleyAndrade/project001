@@ -4,7 +4,7 @@ import Services from "./Services";
 
 export default function HomePage() {
   return (
-    <main id="start" className="flex ml-60 mb-10 h-5/6">
+    <main id="start" className="flex mb-10 h-5/6">
       <div className="bg-middleLight dark:bg-middleDark w-5/12 flex flex-col items-center justify-end relative"> 
         <div className="absolute mb-16">
           <h1 className="text-center text-textLight dark:text-textDark text-7xl font-bold">Dilley Andrade</h1>
@@ -55,9 +55,6 @@ export default function HomePage() {
         </div>
         <div className="border-middleLight dark:border-middleDark mt-8 border-t-2" />
       </div>
-
-      
-      
     </main>
   )
 }
