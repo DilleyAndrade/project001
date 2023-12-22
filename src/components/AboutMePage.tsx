@@ -7,20 +7,20 @@ export default function AboutMePage() {
       <div className="flex w-auto justify-between items-start gap-16">
         <div className='w-3/6 '>
           <h1 className=" text-blueColor text-7xl mb-6 font-bold">Sobre mim</h1>
-          <p className="text-start text-textLight dark:text-textDark text-base font-bold">
+          <p className="text-justify text-textLight dark:text-textDark text-base font-bold">
             Olá! Sou um entusiasta apaixonado por tecnologia e desenvolvimento de software, e 
             estou animado para compartilhar um pouco sobre minha trajetória como desenvolvedor Fullstack.
           </p>
           <br />
-          <p className="text-start text-textLight dark:text-textDark text-base font-bold">
-            Meu foco principal está na stack React e Node.js. Ao longo dos anos, tive a oportunidade de 
+          <p className="text-justify  text-textLight dark:text-textDark text-base font-bold">
+            Meu foco principal está no desenvolvimento web e Devops.js. Ao longo dos anos, tive a oportunidade de 
             trabalhar em projetos desafiadores que envolvem desde a concepção até a implementação de 
             soluções inovadoras e eficientes. Sou movido pela busca constante de aprimorar minhas 
             habilidades técnicas e abraço a mentalidade DevOps para melhorar a entrega contínua e 
             a confiabilidade de sistemas.
           </p>
           <br />
-          <p className="text-start text-textLight dark:text-textDark text-base font-bold">
+          <p className="text-justify text-textLight dark:text-textDark text-base font-bold">
             Minha jornada no universo da programação é enriquecida pela utilização do sistema operacional
             Linux, uma escolha que reflete minha afinidade com ambientes de desenvolvimento robustos e 
             personalizáveis. Acredito no poder da automação para otimizar processos.

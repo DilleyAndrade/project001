@@ -4,9 +4,12 @@ import Titles from "./Titles";
 export default function Testemonial() {
   return (
     <main className="mt-10">
-      <Titles 
-        titles="Depoimentos"
-      />
+      <div className="flex justify-center">
+        <Titles 
+          titles="Depoimentos"
+        />
+      </div>
+      
       <div className="flex justify-around gap-7 flex-wrap">
         <Comment
           commentImage="/imageDepoiment.jpg"

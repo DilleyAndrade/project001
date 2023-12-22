@@ -1,5 +1,6 @@
 import AboutMePage from "./AboutMePage";
 import HomePage from "./HomePage";
+import ProjectsPage from "./ProjectsPage";
 import SkillsPage from "./SkillsPage";
 import Testemonial from "./TestemonialPage";
 
@@ -11,6 +12,7 @@ export default function MainPage() {
         <AboutMePage />
         <Testemonial />
         <SkillsPage />
+        <ProjectsPage />
       </div>
       
     </main>

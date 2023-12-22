@@ -21,6 +21,7 @@ const config: Config = {
 
       redColor: '#F02849',
       blueColor: '#0866FF',
+      blueColorHover: '#0050d2',
 
     },
     extend: {
