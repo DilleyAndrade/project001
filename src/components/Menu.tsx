@@ -1,4 +1,4 @@
-import { GithubLogo, InstagramLogo, LinkedinLogo, YoutubeLogo } from "@phosphor-icons/react/dist/ssr";
+import { GithubLogo, InstagramLogo, LinkedinLogo, TelegramLogo, WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -52,8 +52,12 @@ export default function Header() {
               <GithubLogo size={25} weight="fill" className="text-textLight dark:text-textDark hover:text-blueColor rounded-full hover:scale-125 duration-300" />
             </a>
 
-            <a href="https://www.youtube.com/channel/UCJFir2VE8hcQygD5kzabIhA"target="_blank">
-              <YoutubeLogo size={25} weight="fill" className="text-textLight dark:text-textDark hover:text-blueColor rounded-full hover:scale-125 duration-300" />
+            <a href="https://api.whatsapp.com/send?phone=5581986632609"target="_blank">
+              <WhatsappLogo size={25} weight="fill" className="text-textLight dark:text-textDark hover:text-blueColor rounded-full hover:scale-125 duration-300" />
+            </a>
+
+            <a href="https://t.me/DilleyAndrade"target="_blank">
+              <TelegramLogo size={25} weight="fill" className="text-textLight dark:text-textDark hover:text-blueColor rounded-full hover:scale-125 duration-300" />
             </a>
 
           </div>

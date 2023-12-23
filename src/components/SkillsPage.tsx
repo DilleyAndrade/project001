@@ -38,6 +38,10 @@ export default function SkillsPage() {
               skillName='Tailwind'
             />
             <SkillsIcons
+              skillImage='/skills/figmaLogo.png'
+              skillName='Figma'
+            />
+            <SkillsIcons
               skillImage='/skills/styledcomponentsLogo.png'
               skillName='Styled Comp.'
             />

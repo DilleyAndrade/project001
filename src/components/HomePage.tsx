@@ -8,13 +8,13 @@ export default function HomePage() {
       <div className="bg-middleLight dark:bg-middleDark w-5/12 flex flex-col items-center justify-end relative"> 
         <div className="absolute mb-16">
           <h1 className="text-center text-textLight dark:text-textDark text-7xl font-bold">Dilley Andrade</h1>
-          <h5 className="text-center text-textLight dark:text-textDark text-2xl">FullStack Developer | React/Nodejs | Linux | DevOps</h5>
+          <h5 className="text-center text-textLight dark:text-textDark text-2xl">Dev FullStack | React/Nodejs | Linux | DevOps</h5>
         </div>
         <Image src="/myPhoto.png" width={400} height={300} alt="My Image" />
       </div>
       <div className="w-8/12 pt-8 pl-12 flex flex-col justify-between ">
         <h1 className="text-start text-blueColor text-7xl font-bold">Transformando ideias em realidade com códigos e design</h1>
-        <h5 className="text-start text-textLight dark:text-textDark text-2xl my-3">FullStack Developer | React/Nodejs | Linux | DevOps</h5>
+        <h5 className="text-start text-textLight dark:text-textDark text-2xl my-3">Dev FullStack | React/Nodejs | Linux | DevOps</h5>
 
         <a className="border-2 border-blueColor text-textLight dark:text-textDark
           text-2xl bg-none max-w-max py-3 px-14 rounded-xl hover:bg-blueColor duration-300"
