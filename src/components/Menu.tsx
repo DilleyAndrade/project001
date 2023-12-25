@@ -1,8 +1,13 @@
+import { LangContext } from "@/context/langContext";
 import { GithubLogo, InstagramLogo, LinkedinLogo, TelegramLogo, WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import Link from "next/link";
+import { useContext } from "react";
 
 export default function Header() {
+
+  const { isEnglish, setIsEnglish } = useContext(LangContext)
+
   return (
     <header>
       <div className="bg-menuLight dark:bg-menuDark w-60 h-screen flex  flex-col py-7 justify-between items-center fixed z-10 left-0">
@@ -13,12 +18,12 @@ export default function Header() {
           <ul>
             <li className="border-y-2 border-middleLight dark:border-middleDark py-2">
               <Link className="hover:text-blueColor duration-200" href="#start">
-                Início
+                {isEnglish ? 'Home': 'Início'}
               </Link>
             </li>
             <li className="border-b-2 border-middleLight dark:border-middleDark py-2">
               <Link className="hover:text-blueColor duration-200" href="#aboutMe">
-                Sobre Mim
+                {isEnglish ? 'About Me': 'Sobre Mim'}
               </Link>
             </li>
             <li className="border-b-2 border-middleLight dark:border-middleDark py-2">
@@ -28,12 +33,12 @@ export default function Header() {
             </li>
             <li className="border-b-2 border-middleLight dark:border-middleDark py-2">
               <Link className="hover:text-blueColor duration-200" href="#projects">
-                Projetos
+                {isEnglish ? 'Projects': 'Projetos'}
               </Link>
             </li>
             <li className="border-b-2 border-middleLight dark:border-middleDark py-2">
               <Link className="hover:text-blueColor duration-200" href="#contacts">
-                Contatos
+                {isEnglish ? 'Contacts': 'Contatos'}
               </Link>
             </li>
           </ul>
@@ -61,7 +66,12 @@ export default function Header() {
             </a>
 
           </div>
-          <p className="text-textLight dark:text-textDark text-xs text-center">2024&copy; Todos os direitos reservados<br />Desenvolvido por Dilley Andrade</p>
+          <p className="text-textLight dark:text-textDark text-xs text-center">
+            {isEnglish
+              ? '2024© All rights reserved. Developed by Dilley Andrade'
+              : '2024© Todos os direitos reservados. Desenvolvido por Dilley Andrade'
+            }
+          </p>
         </div>
       </div>
     </header>

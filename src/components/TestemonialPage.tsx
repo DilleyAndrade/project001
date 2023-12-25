@@ -1,66 +1,33 @@
+import { useContext } from "react";
 import Comment from "./Comment";
 import Titles from "./Titles";
+import { LangContext } from "@/context/langContext";
+import { commentList } from "./listComment";
 
 export default function Testemonial() {
+
+  const { isEnglish } = useContext(LangContext)
+
+  const allComments = commentList
+
   return (
     <main className="mt-10">
       <div className="flex justify-center">
         <Titles 
-          titles="Depoimentos"
+          titles={isEnglish ? 'Comments' : 'Comentários'}
         />
       </div>
       
       <div className="flex justify-around gap-7 flex-wrap">
-        <Comment
-          commentImage="/imageDepoiment.jpg"
-          commentName="Nanda Paes"
-          commentProfession="Designer no google"
-          commentText="é um profissional atencioso, dedicado e competente. Ele se 
-            mostrou sempre disponível para esclarecer minhas dúvidas e atender às minhas
-            necessidades. Também gostei do fato de ele trabalhar com uma equipe de 
-            profissionais experientes e qualificados."
+        {commentList.map((comment)=>(
+          <Comment
+          key={comment.commentName}
+          commentImage={comment.commentImage}
+          commentName={comment.commentName}
+          commentProfession={comment.commentProfession}
+          commentText={comment.commentText}
         />
-
-        <Comment
-          commentImage="/imageDepoiment.jpg"
-          commentName="Nanda Paes"
-          commentProfession="Designer no google"
-          commentText="é um profissional atencioso, dedicado e competente. Ele se 
-            mostrou sempre disponível para esclarecer minhas dúvidas e atender às minhas
-            necessidades. Também gostei do fato de ele trabalhar com uma equipe de 
-            profissionais experientes e qualificados."
-        />
-
-        <Comment
-          commentImage="/imageDepoiment.jpg"
-          commentName="Nanda Paes"
-          commentProfession="Designer no google"
-          commentText="é um profissional atencioso, dedicado e competente. Ele se 
-            mostrou sempre disponível para esclarecer minhas dúvidas e atender às minhas
-            necessidades. Também gostei do fato de ele trabalhar com uma equipe de 
-            profissionais experientes e qualificados."
-        />
-
-        <Comment
-          commentImage="/imageDepoiment.jpg"
-          commentName="Nanda Paes"
-          commentProfession="Designer no google"
-          commentText="é um profissional atencioso, dedicado e competente. Ele se 
-            mostrou sempre disponível para esclarecer minhas dúvidas e atender às minhas
-            necessidades. Também gostei do fato de ele trabalhar com uma equipe de 
-            profissionais experientes e qualificados."
-        />
-
-        <Comment
-          commentImage="/imageDepoiment.jpg"
-          commentName="Nanda Paes"
-          commentProfession="Designer no google"
-          commentText="é um profissional atencioso, dedicado e competente. Ele se 
-            mostrou sempre disponível para esclarecer minhas dúvidas e atender às minhas
-            necessidades. Também gostei do fato de ele trabalhar com uma equipe de 
-            profissionais experientes e qualificados."
-        />
-        
+        ))}
       </div>
       <div className="border-middleLight dark:border-middleDark my-8 border-t-2" />
     </main>

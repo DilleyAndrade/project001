@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Titles from './Titles'
 import SkillsIcons from './SkillsIcons'
+import { LangContext } from '@/context/langContext'
 
 export default function SkillsPage() {
+
+  const {isEnglish} = useContext(LangContext)
+
   return (
     <div id='skills'>
       <div className='flex items-start justify-between'>
@@ -86,20 +90,28 @@ export default function SkillsPage() {
         <div>
           <Titles titles='Soft Skills' />
           <ul className='text-textLight dark:text-textDark text-2xl font-bold'>
-            <li>- Trabalho em equipe</li>
-            <li>- Comunicação efetiva</li>
-            <li>- Adaptabilidade</li>
-            <li>- Pensamento crítico</li>
-            <li>- Resolução de problemas</li>
-            <li>- Gerenciamento de tempo</li>
-            <li>- Atitude positiva</li>
-            <li>- Proatividade</li>
-            <li>- Aprendizado contínuo</li>
-            <li>- Flexibilidade</li>
+            <li>{isEnglish ? '- Team work'               : '- Trabalho em equipe'}    </li>
+            <li>{isEnglish ? '- Effective communication' : '- Comunicação efetiva'}   </li>
+            <li>{isEnglish ? '- Adaptability'            : '- Adaptabilidade'}        </li>
+            <li>{isEnglish ? '- Critical thinking'       : '- Pensamento crítico'}    </li>
+            <li>{isEnglish ? '- Problem solving'         : '- Resolução de problemas'}</li>
+            <li>{isEnglish ? '- Time management'         : '- Gerenciamento de tempo'}</li>
+            <li>{isEnglish ? '- Positive attitude'       : '- Atitude positiva'}      </li>
+            <li>{isEnglish ? '- Proactivity'             : '- Proatividade'}          </li>
+            <li>{isEnglish ? '- Continuous learning'     : '- Aprendizado contínuo'}  </li>
+            <li>{isEnglish ? '- Flexibility'             : '- Flexibilidade'}         </li>
           </ul>
         </div>
       </div>
-      <div className="border-middleLight dark:border-middleDark my-8 border-t-2" />
+      <h5 className="text-center text-textLight dark:text-textDark text-2xl mt-7">
+        {isEnglish 
+          ? 'I believe that a good professional is formed not only by technical ability, but also by the way he interacts with his team and their daily problems. I strive to perform both areas with excellence and care, after all, a company is not formed by a good professional, but by a good team working together in harmony and with a defined main objective.' 
+          : 'Acredito que um bom profissional é formado não apenas pela capacidade técnica, mas também pela forma como ele interage com sua equipe e com seus problemas diários. Me empenho para desempenhar ambas as áreas com excelência e capricho, afinal,uma empresa é formada não por um bom profissional, mas sim por uma boa equipe trabalhando juntos com harmonia e um objetivo principal definido.'
+          }
+        
+      </h5>
+
+      <div className="border-middleLight dark:border-middleDark my-10 border-t-2" />
     </div>
   )
 }
