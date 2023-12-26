@@ -2,13 +2,20 @@ import React, { useContext } from 'react'
 import Titles from './Titles'
 import { LangContext } from '@/context/langContext'
 
+import{motion} from 'framer-motion'
+
 export default function AboutMePage() {
 
   const { isEnglish } = useContext(LangContext)
 
   return (
   
-    <main id='aboutMe'>
+    <motion.main 
+      initial={{ opacity: 0, x: -800  }} 
+      whileInView={{ opacity: 1, x: 0 }} 
+      transition={{duration: 1}} 
+      id='aboutMe'
+    >
       <div className="flex w-auto justify-between items-start gap-16">
         <div className='w-3/6 '>
           <h1 className=" text-blueColor text-7xl mb-6 font-bold">
@@ -62,7 +69,7 @@ export default function AboutMePage() {
           </p>
       
           <a className="border-2 mt-5 border-blueColor text-textLight dark:text-textDark
-            text-2xl bg-none max-w-max py-3 px-14 rounded-xl hover:bg-blueColor duration-300"
+              text-2xl bg-none max-w-max py-3 px-14 rounded-xl hover:bg-blueColor duration-300"
             href="https://api.whatsapp.com/send?phone=5581986632609"
             target="_blank"
           >
@@ -71,6 +78,6 @@ export default function AboutMePage() {
         </div>
       </div>
       <div className="border-middleLight dark:border-middleDark my-8 border-t-2" />
-    </main>
+    </motion.main>
   )
 }

@@ -4,6 +4,8 @@ import Titles from "./Titles";
 import { LangContext } from "@/context/langContext";
 import { commentList } from "./listComment";
 
+import {motion} from 'framer-motion'
+
 export default function Testemonial() {
 
   const { isEnglish } = useContext(LangContext)
@@ -18,7 +20,12 @@ export default function Testemonial() {
         />
       </div>
       
-      <div className="flex justify-around gap-7 flex-wrap">
+      <motion.div 
+        initial={{opacity:0, y:150}} 
+        whileInView={{opacity:1, y:0}} 
+        transition={{duration: .5}} 
+        className="flex justify-around gap-7 flex-wrap"
+      >
         {commentList.map((comment)=>(
           <Comment
           key={comment.commentName}
@@ -28,7 +35,7 @@ export default function Testemonial() {
           commentText={comment.commentText}
         />
         ))}
-      </div>
+      </motion.div>
       <div className="border-middleLight dark:border-middleDark my-8 border-t-2" />
     </main>
   )

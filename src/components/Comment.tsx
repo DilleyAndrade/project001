@@ -8,6 +8,7 @@ interface CommentProps{
 }
 
 export default function Comment({ commentText, commentName, commentProfession, commentImage }:CommentProps) {
+
   return (
     <div className="flex flex-col items-center gap-5">
       <div className="w-64 bg-middleLight dark:bg-middleDark p-2 rounded-lg">
@@ -15,7 +16,13 @@ export default function Comment({ commentText, commentName, commentProfession, c
         {commentText}
       </p>
       </div>
-      <Image className="rounded-tl-3xl rounded-br-3xl" src={commentImage} width={170} height={170} alt="Image comment" />
+      <Image 
+        className="rounded-tl-3xl rounded-br-3xl" 
+        src={commentImage} 
+        width={170} 
+        height={170} 
+        alt="Image comment"
+      />
       <div className="text-center">
         <h5 className="text-textLight dark:text-textDark text-2xl font-bold">
           {commentName}

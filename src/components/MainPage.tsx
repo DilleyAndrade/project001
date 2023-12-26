@@ -7,14 +7,14 @@ import Testemonial from "./TestemonialPage";
 
 export default function MainPage() {
   return (
-    <main className="w-screen ml-60  flex flex-col">
+    <main className="w-screen lg:ml-60  flex flex-col">
       <HomePage />
       <div className="ml-12">
-        <AboutMePage />
+        {/*<AboutMePage />
         <Testemonial />
         <SkillsPage />
         <ProjectsPage />
-        <Footer /> 
+        <Footer />*/}
       </div>
       
     </main>
