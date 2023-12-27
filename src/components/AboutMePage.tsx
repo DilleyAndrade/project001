@@ -11,16 +11,15 @@ export default function AboutMePage() {
   return (
   
     <motion.main 
-      initial={{ opacity: 0, x: -800  }} 
-      whileInView={{ opacity: 1, x: 0 }} 
-      transition={{duration: 1}} 
+      initial={{opacity:0, x:-350}}
+      whileInView={{opacity:1, x:0}}
+      transition={{duration: 1}}
       id='aboutMe'
     >
-      <div className="flex w-auto justify-between items-start gap-16">
-        <div className='w-3/6 '>
-          <h1 className=" text-blueColor text-7xl mb-6 font-bold">
+      <div className=" text-center lg:text-start px-5 lg:px-0  flex flex-col lg:flex-row justify-between items-start gap-16">
+        <div className=' w-full lg:w-3/6 '>
+          <h1 className=" text-blueColor text-5xl mt-8 lg:mt-0 lg:text-7xl mb-6 font-bold">
             {isEnglish ? 'About me' : 'Sobre mim'}
-            
           </h1>
           <p className="text-justify text-textLight dark:text-textDark text-base font-bold">
             {isEnglish 
@@ -44,32 +43,30 @@ export default function AboutMePage() {
             
           </p>
           <br />
-          <a className='text-base font-bold text-blueColor' href="">
+          <a 
+            className='text-base font-bold text-blueColor' 
+            href="https://api.whatsapp.com/send?phone=5581986632609"
+            target='_blank'
+          >
             {isEnglish ? "Let's create something together." : "Vamos criar algo juntos."}
           </a>
         </div>
         <div className='flex flex-col'>
           <Titles titles={isEnglish ? 'Personal informations' :'Informações pessoais'}/>
-          <p className='text-textLight dark:text-textDark text-2xl'>
-            <b>{isEnglish ? 'Name' : 'Nome'}</b>: Dilley Andrade
-              <br />
-            <b>{isEnglish ? 'Area' : 'Área'}</b>:  Dev Fullstack | Devops
-              <br />
-            <b>{isEnglish ? 'Current residence' : 'Residência atual'}</b>: Bra{isEnglish ? 'z' : 's'}il
-              <br />
-            <b>Email</b>: dilleyandrade@gmail.com
-              <br />
-            <b>Github</b>: https://github.com/DilleyAndrade
-              <br />
-            <b>Linkedin</b>: https://www.linkedin.com/in/dilley-andrade/
-              <br />
-            <b>{isEnglish ? 'Professional contact' : 'Contato profissional'}</b>: +55 (81) 986-632-609
-              <br />
-            <b>Freelancer</b>: {isEnglish ? 'Avaiable' : 'Disponível'} 
-          </p>
+
+          <div className='text-textLight dark:text-textDark text-xl lg:text-2xl mt-8 lg:mt-0'>
+            <h4 className='flex lg:flex-row flex-col mb-2 lg:mb-0 lg:gap-2'><b>{isEnglish ? 'Name' : 'Nome'}:</b>Dilley Andrade</h4>
+            <h4 className='flex lg:flex-row flex-col mb-2 lg:mb-0 lg:gap-2'><b>{isEnglish ? 'Area' : 'Área'}:</b> Dev Fullstack | Devops</h4>
+            <h4 className='flex lg:flex-row flex-col mb-2 lg:mb-0 lg:gap-2'><b>{isEnglish ? 'Current residence' : 'Residência atual'}:</b>Bra{isEnglish ? 'z' : 's'}il</h4>
+            <h4 className='flex lg:flex-row flex-col mb-2 lg:mb-0 lg:gap-2'><b>Email:</b>dilleyandrade@gmail.com</h4>
+            <h4 className='flex lg:flex-row flex-col mb-2 lg:mb-0 lg:gap-2'><b>Github:</b>https://github.com/DilleyAndrade</h4>
+            <h4 className='flex lg:flex-row flex-col mb-2 lg:mb-0 lg:gap-2'><b>Linkedin:</b>https://www.linkedin.com/in/dilley-andrade/</h4>
+            <h4 className='flex lg:flex-row flex-col mb-2 lg:mb-0 lg:gap-2'><b>{isEnglish ? 'Professional contact' : 'Contato profissional'}:</b>+55 (81) 986-632-609</h4>
+            <h4 className='flex lg:flex-row flex-col mb-2 lg:mb-0 lg:gap-2'><b>Freelancer:</b>{isEnglish ? 'Avaiable' : 'Disponível'}</h4>
+          </div>
       
-          <a className="border-2 mt-5 border-blueColor text-textLight dark:text-textDark
-              text-2xl bg-none max-w-max py-3 px-14 rounded-xl hover:bg-blueColor duration-300"
+          <a className="border-2 text-center border-blueColor text-textLight dark:text-textDark
+            text-2xl bg-none w-full py-3 mt-5 rounded-xl hover:bg-blueColor duration-300"
             href="https://api.whatsapp.com/send?phone=5581986632609"
             target="_blank"
           >

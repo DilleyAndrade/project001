@@ -14,14 +14,14 @@ export default function SkillsPage() {
   return (
     <div id='skills' className='overflow-hidden'>
       <motion.div 
-        initial={{opacity:0, x:700}} 
+        initial={{opacity:0, x:300}} 
         whileInView={{opacity:1, x:0}} 
         transition={{duration:.9}} 
-        className='flex items-start justify-between'
+        className='flex flex-col lg:flex-row items-center justify-center lg:items-start lg:justify-between'
       >
-        <div className='w-9/12'>
+        <div className=' w-full lg:w-9/12'>
           <Titles titles='Hard Skills' />
-          <div className='flex flex-wrap gap-8'>
+          <div className='flex justify-center lg:justify-start mt-8 lg:mt-0 flex-wrap gap-8'>
             {allSkills.map((skill)=>(
               <SkillsIcons
                 key={skill.name}
@@ -31,9 +31,9 @@ export default function SkillsPage() {
             ))}
           </div>
         </div>
-        <div>
+        <div className='mt-12 lg:mt-0'>
           <Titles titles='Soft Skills' />
-          <ul className='text-textLight dark:text-textDark text-2xl font-bold'>
+          <ul className='text-center text-textLight mt-8 lg:mt-0 dark:text-textDark text-2xl font-bold'>
             <li>{isEnglish ? '- Team work'               : '- Trabalho em equipe'}    </li>
             <li>{isEnglish ? '- Effective communication' : '- Comunicação efetiva'}   </li>
             <li>{isEnglish ? '- Adaptability'            : '- Adaptabilidade'}        </li>
@@ -51,7 +51,7 @@ export default function SkillsPage() {
         initial={{opacity:0, y:-50}} 
         whileInView={{opacity:1, y:0}} 
         transition={{duration:.9}}  
-        className="text-center text-textLight dark:text-textDark text-2xl mt-7"
+        className="text-center text-textLight dark:text-textDark text-xl lg:text-2xl mt-7"
       >
         {isEnglish 
           ? 'I believe that a good professional is formed not only by technical ability, but also by the way he interacts with his team and their daily problems. I strive to perform both areas with excellence and care, after all, a company is not formed by a good professional, but by a good team working together in harmony and with a defined main objective.' 

@@ -8,12 +8,12 @@ export default function Footer() {
 
   return (
     <div id="contacts">
-      <div className="flex justify-around items-center">
-        <div>
-          <h1 className="text-textLight dark:text-textDark text-7xl font-bold">Dilley Andrade</h1>
-          <h5 className="text-blueColor text-2xl mt-3">Dev FullStack | React/Nodejs | Linux | DevOps</h5>
+      <div className="flex flex-col px-5 lg:px-0 lg:flex-row justify-around items-center">
+        <div className="text-center ">
+          <h1 className="text-textLight dark:text-textDark text-5xl lg:text-7xl font-bold">Dilley Andrade</h1>
+          <h5 className="text-blueColor text-base lg:text-2xl mt-3">Dev FullStack | React/Nodejs | Linux | DevOps</h5>
           <div>
-            <div className="flex gap-6 mt-5 mb-9">
+            <div className="flex justify-center gap-6 mt-5 mb-9">
               <a href="https://www.linkedin.com/in/dilley-andrade/"target="_blank">
                 <LinkedinLogo size={46} weight="fill" className="text-textLight dark:text-textDark hover:text-blueColor  hover:scale-125 duration-300" />
               </a>
@@ -47,7 +47,7 @@ export default function Footer() {
           </div>
         </div>
       
-        <div className="bg-menuLight w-2/6 p-9 relative z-10 rounded-t-xl">
+        <div className="bg-menuLight mt-8 lg:mt-0 w-full lg:w-2/6 p-9 relative  rounded-t-xl">
           <div>
             <h2 className="text-textLight text-center mb-14 text-5xl border-blueColor pb-2 border-b-4 font-bold">
               {isEnglish ? 'Talk to me' : 'Fale comigo'}
@@ -88,13 +88,13 @@ export default function Footer() {
               </button>
             </form>
           </div>
-          <div className="w-2/4 h-2/4 border-l-8 border-b-8 border-blueColor absolute -left-2 -bottom-2 -z-50"></div>
+          <div className="w-2/4 h-2/4 border-l-8 border-b-8 border-blueColor absolute -left-2 -bottom-2 "></div>
         </div>
         
       </div>
       
       <div className="border-middleLight dark:border-middleDark my-8 border-t-2" />
-      <h5 className="text-center text-textLight dark:text-textDark text-2xl mb-8">
+      <h5 className="text-center text-textLight dark:text-textDark text-sm lg:text-2xl mb-8">
         {isEnglish
           ? '2024© All rights reserved. Developed by Dilley Andrade'
           : '2024© Todos os direitos reservados. Desenvolvido por Dilley Andrade'

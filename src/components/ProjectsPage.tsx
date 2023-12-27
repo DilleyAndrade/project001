@@ -23,7 +23,7 @@ export default function ProjectsPage() {
           initial={{opacity: 0, y: -180}} 
           whileInView={{opacity: 1, y:0}} 
           transition={{duration: .6}} 
-          className="flex flex-wrap items-center justify-center gap-8 mb-12"
+          className="flex flex-wrap items-center justify-center mt-8 lg:mt-0 gap-8 mb-12"
         >
           {allProjects.map((project)=>(
             <Project key={project.projectTitle}
@@ -39,7 +39,8 @@ export default function ProjectsPage() {
         </motion.div>
 
         <a 
-          href="https://github.com/DilleyAndrade?tab=repositories" 
+          href="https://github.com/DilleyAndrade?tab=repositories"
+          target="_blank"
           className="text-blueColor text-sm font-bold"
         >
           {isEnglish ? "See more in my Github" : "Veja mais no meu Github"}

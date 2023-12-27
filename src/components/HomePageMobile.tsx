@@ -2,34 +2,64 @@ import Image from "next/image";
 import Titles from "./Titles";
 import Services from "./Services";
 import { useContext } from "react";
-import { LangContext } from "@/context/langContext";
+import { IsOpenMenuMobile, LangContext } from "@/context/langContext";
 import {motion} from 'framer-motion'
 import { List } from "@phosphor-icons/react/dist/ssr";
 
-export default function HomePage() {
+export default function HomePageMobile() {
 
   const { isEnglish, setIsEnglish } = useContext(LangContext)
+  const {setMenuMobileIsOpen} = useContext(IsOpenMenuMobile)
 
   return (
    
-    <main id="start" className="hidden lg:flex flex-col lg:flex-row overflow-hidden mb-10 w-full h-5/6">
+    <main id="start" className="flex flex-col overflow-hidden">
     
       <motion.div 
         initial={{opacity:0, x:-300}} 
         animate={{opacity:1, x:0}} 
         transition={{duration: .5}} 
-        className="hidden lg:flex bg-middleLight dark:bg-middleDark w-5/12  z-10 flex-col
-          items-center justify-end relative"
+        className="lg:hidden bg-middleLight dark:bg-middleDark flex-col
+          items-center justify-end relative mt-14 z-10"
       > 
-        <div className="absolute mb-16">
+        <div 
+          className="flex items-center justify-between fixed top-0 w-full py-2 px-5 border-b-2
+            border-blueColor bg-middleLight dark:bg-middleDark bg-opacity-95 dark:bg-opacity-95 z-40"
+        >
+          <button onClick={()=>setMenuMobileIsOpen(true)} className="flex items-center gap-2 text-textLight dark:text-textDark">
+            <List size={40} weight="bold" />
+            <h4 className="text-base">
+              Menu
+            </h4>
+          </button>
+            
+          <div>
+            <button 
+              onClick={()=> setIsEnglish(true)} 
+              className="bg-menuLight h-10 w-10 mr-3 rounded-full hover:scale-105 duration-300"
+            >
+              En
+            </button>
+
+            <button 
+              onClick={()=> setIsEnglish(false)}
+              className="bg-menuLight h-10 w-10 rounded-full hover:scale-105 duration-300"
+            >
+              Pt
+            </button>
+          </div>
+        </div>
+        
+
+        <div className="absolute bottom-3">
           <h1 
-            className="text-center text-textLight dark:text-textDark text-7xl
+            className="text-center text-textLight dark:text-textDark text-6xl
             font-bold"
           >
             Dilley Andrade
           </h1>
           <h5 
-            className="text-center text-textLight dark:text-textDark text-2xl"
+            className="text-center text-textLight dark:text-textDark text-base"
           >
             Dev FullStack | React/Nodejs | Linux | DevOps
           </h5>
@@ -41,44 +71,28 @@ export default function HomePage() {
         initial={{opacity:0, x:-300}} 
         animate={{opacity:1, x:0}} 
         transition={{delay: .4, duratiton:.5}} 
-        className="hidden w-7/12 pt-8 pl-12 lg:flex flex-col justify-between "
+        className="lg:hidden w-full pt-8 flex-col flex justify-center"
       >
-        
-        <div className="flex gap-4 justify-end w-full">
-          <button 
-            onClick={()=> setIsEnglish(true)} 
-            className="bg-menuLight h-10 w-10 rounded-full hover:scale-105 duration-300"
-          >
-            En
-          </button>
-
-          <button 
-            onClick={()=> setIsEnglish(false)}
-            className="bg-menuLight h-10 w-10 rounded-full hover:scale-105 duration-300"
-          >
-            Pt
-          </button>
-        </div>
-
-        <h1 className="text-start text-blueColor w-5/6 text-7xl font-bold">
+        <h1 className="text-center text-blueColor  text-5xl font-bold">
           {isEnglish 
             ? 'From Backend to Frontend, Developing Innovative Solutions.'
             : 'Do Backend ao Frontend, criando Soluções Inovadoras.'
           }
         </h1>
         <h5 
-          className="text-start text-textLight dark:text-textDark text-2xl my-3"
+          className="text-center text-textLight dark:text-textDark text-base"
         >
           Dev FullStack | React/Nodejs | Linux | DevOps
         </h5>
-        <a className="border-2 border-blueColor text-textLight dark:text-textDark
-          text-2xl bg-none max-w-max py-3 px-14 rounded-xl hover:bg-blueColor duration-300"
+        <a className="border-2 text-center border-blueColor text-textLight dark:text-textDark
+          text-2xl bg-none w-full py-3 mt-5 rounded-xl hover:bg-blueColor duration-300"
           href="https://api.whatsapp.com/send?phone=5581986632609"
           target="_blank"
         >
           {isEnglish ? 'Talk to me' : 'Fale comigo'}
         </a>
-        <div className="border-middleLight dark:border-middleDark my-8 border-t-2" />
+        <div
+          className="border-middleLight dark:border-middleDark my-8 border-t-2" />
         <Titles
           titles=
           {isEnglish ? 'Main services' : 'Principais Serviços'}

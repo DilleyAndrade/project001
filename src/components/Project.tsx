@@ -23,17 +23,14 @@ export default function Project({
 
   const {isEnglish} = useContext(LangContext)
 
-  const allTechnology = projectList
-
   return (
-    <div>
+    <div className=''>
       <div 
-        className='flex border-2 border-middleLight dark:border-middleDark
+        className='flex flex-col lg:flex-row border-2 border-middleLight dark:border-middleDark
           hover:border-blueColor duration-500 gap-10 p-4 bg-middleLight
           dark:bg-middleDark max-w-max rounded-xl'>
-        <Image className='rounded-lg' src={projectImage} width={347} height={347} alt='Project Icon' />
+        <Image className='rounded-lg' src={projectImage} width={330} height={330} alt='Project Icon' />
         <div className='w-80 flex flex-col justify-between'>
-
           <div>
           <h5 
             className="text-start text-textLight dark:text-textDark 
@@ -51,7 +48,7 @@ export default function Project({
             </p>
           </div>
           </div>
-          <div className='flex justify-between'>
+          <div className='mt-11 lg:mt-0 flex justify-between'>
             <a 
               className="border-2 border-blueColor bg-blueColor hover:bg-blueColorHover
                 duration-300 font-bold text-textDark text-base bg-none 
