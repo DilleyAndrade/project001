@@ -8,7 +8,7 @@ export default function Footer() {
 
   return (
     <div id="contacts">
-      <div className="flex flex-col px-5 lg:px-0 lg:flex-row justify-around items-center">
+      <div className="flex flex-col xl:flex-row xl:gap-10 px-5 justify-around items-center">
         <div className="text-center ">
           <h1 className="text-textLight dark:text-textDark text-5xl lg:text-7xl font-bold">Dilley Andrade</h1>
           <h5 className="text-blueColor text-base lg:text-2xl mt-3">Dev FullStack | React/Nodejs | Linux | DevOps</h5>
@@ -47,7 +47,7 @@ export default function Footer() {
           </div>
         </div>
       
-        <div className="bg-menuLight mt-8 lg:mt-0 w-full lg:w-2/6 p-9 relative  rounded-t-xl">
+        <div className="bg-menuLight mt-8 w-9/12 xl:w-6/12 p-9 relative rounded-t-xl">
           <div>
             <h2 className="text-textLight text-center mb-14 text-5xl border-blueColor pb-2 border-b-4 font-bold">
               {isEnglish ? 'Talk to me' : 'Fale comigo'}

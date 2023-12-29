@@ -15,7 +15,7 @@ export default function MenuMobile({onCloseMenuMobile}:any) {
 
     <header>
       <motion.div 
-        initial={{x:-350}}
+        initial={{x:-850}}
         animate={{x:0}}
         transition={{duration: .4, delay:.2}}
         
@@ -152,7 +152,7 @@ export default function MenuMobile({onCloseMenuMobile}:any) {
         </div>
       </motion.div>
       <motion.div
-        initial={{x:-350}}
+        initial={{x:-850}}
         animate={{x:0}}
         transition={{duration: .4}}
         className=" h-screen bg-blueColor w-11/12 fixed z-40"

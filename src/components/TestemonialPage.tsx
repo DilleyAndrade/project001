@@ -13,12 +13,12 @@ export default function Testemonial() {
   const allComments = commentList
 
   return (
-    <main className="mt-10">
-      <div className="flex justify-center">
-        <Titles 
-          titles={isEnglish ? 'Comments' : 'Comentários'}
-        />
-      </div>
+    <main className="mt-10 px-5">
+  
+      <Titles 
+        titles={isEnglish ? 'Comments' : 'Comentários'}
+        titleDetail={isEnglish ? 'See what they say about me' : 'Veja o que dizem sobre mim'}
+      />
       
       <motion.div 
         initial={{opacity:0, y:50}} 
@@ -26,7 +26,7 @@ export default function Testemonial() {
         transition={{duration: .5}} 
         className="flex justify-around gap-9 mt-8 lg:mt-0 flex-wrap"
       >
-        {commentList.map((comment)=>(
+        {allComments.map((comment)=>(
           <Comment
           key={comment.commentName}
           commentImage={comment.commentImage}

@@ -17,11 +17,15 @@ export default function SkillsPage() {
         initial={{opacity:0, x:300}} 
         whileInView={{opacity:1, x:0}} 
         transition={{duration:.9}} 
-        className='flex flex-col lg:flex-row items-center justify-center lg:items-start lg:justify-between'
+        className='flex flex-col 2xl:flex-row justify-center 2xl:justify-between'
       >
-        <div className=' w-full lg:w-9/12'>
-          <Titles titles='Hard Skills' />
-          <div className='flex justify-center lg:justify-start mt-8 lg:mt-0 flex-wrap gap-8'>
+        
+        <div className='2xl:w-9/12'>
+          <Titles 
+            titles='Hard Skills'
+            titleDetail={isEnglish ? 'Technologies i use' : 'Tecnologias que utilizo'}
+          />
+          <div className='flex justify-center 2xl:justify-start mt-4 flex-wrap gap-8 px-5 mb-14'>
             {allSkills.map((skill)=>(
               <SkillsIcons
                 key={skill.name}
@@ -31,27 +35,34 @@ export default function SkillsPage() {
             ))}
           </div>
         </div>
-        <div className='mt-12 lg:mt-0'>
-          <Titles titles='Soft Skills' />
-          <ul className='text-center text-textLight mt-8 lg:mt-0 dark:text-textDark text-2xl font-bold'>
-            <li>{isEnglish ? '- Team work'               : '- Trabalho em equipe'}    </li>
-            <li>{isEnglish ? '- Effective communication' : '- Comunicação efetiva'}   </li>
-            <li>{isEnglish ? '- Adaptability'            : '- Adaptabilidade'}        </li>
-            <li>{isEnglish ? '- Critical thinking'       : '- Pensamento crítico'}    </li>
-            <li>{isEnglish ? '- Problem solving'         : '- Resolução de problemas'}</li>
-            <li>{isEnglish ? '- Time management'         : '- Gerenciamento de tempo'}</li>
-            <li>{isEnglish ? '- Positive attitude'       : '- Atitude positiva'}      </li>
-            <li>{isEnglish ? '- Proactivity'             : '- Proatividade'}          </li>
-            <li>{isEnglish ? '- Continuous learning'     : '- Aprendizado contínuo'}  </li>
-            <li>{isEnglish ? '- Flexibility'             : '- Flexibilidade'}         </li>
-          </ul>
+      
+        <div>
+          <Titles 
+              titles='Soft Skills' 
+              titleDetail={isEnglish ? 'Main social skills' : 'Principais habilidades sociais'}
+          />
+          <div>
+            <ul className='text-center flex flex-col gap-4 2xl:text-start text-textLight mt-1 dark:text-textDark text-2xl font-bold px-5'>
+              <li>{isEnglish ? '- Team work'               : '- Trabalho em equipe'}    </li>
+              <li>{isEnglish ? '- Effective communication' : '- Comunicação efetiva'}   </li>
+              <li>{isEnglish ? '- Adaptability'            : '- Adaptabilidade'}        </li>
+              <li>{isEnglish ? '- Critical thinking'       : '- Pensamento crítico'}    </li>
+              <li>{isEnglish ? '- Problem solving'         : '- Resolução de problemas'}</li>
+              <li>{isEnglish ? '- Time management'         : '- Gestão de tempo'}</li>
+              <li>{isEnglish ? '- Positive attitude'       : '- Atitude positiva'}      </li>
+              <li>{isEnglish ? '- Proactivity'             : '- Proatividade'}          </li>
+              <li>{isEnglish ? '- Continuous learning'     : '- Aprendizado contínuo'}  </li>
+              <li>{isEnglish ? '- Flexibility'             : '- Flexibilidade'}         </li>
+            </ul>
+          </div>
         </div>
       </motion.div>
+
       <motion.h5 
         initial={{opacity:0, y:-50}} 
         whileInView={{opacity:1, y:0}} 
         transition={{duration:.9}}  
-        className="text-center text-textLight dark:text-textDark text-xl lg:text-2xl mt-7"
+        className="text-center text-textLight dark:text-textDark text-base 2xl:text-md mt-7 px-5"
       >
         {isEnglish 
           ? 'I believe that a good professional is formed not only by technical ability, but also by the way he interacts with his team and their daily problems. I strive to perform both areas with excellence and care, after all, a company is not formed by a good professional, but by a good team working together in harmony and with a defined main objective.' 

@@ -1,58 +1,81 @@
 import { LangContext } from '@/context/langContext'
 import Image from 'next/image'
 import React, { useContext } from 'react'
-import { projectList } from './listProject'
 
 interface ProjectProps {
   projectImage: string
   projectTitle: string
   projectDescription: string
-  projectTechnology: string
   projectSiteLink: string
   projectCodeLink: string
+  projectTech1: string
+  projectTech2: string
+  projectTech3: string
+  projectTech4: string
+  projectTech5: string
 }
 
 export default function Project({
   projectImage, 
   projectTitle, 
   projectDescription, 
-  projectTechnology, 
-  projectSiteLink, 
-  projectCodeLink
+  projectSiteLink,
+  projectCodeLink,
+  projectTech1,
+  projectTech2,
+  projectTech3,
+  projectTech4,
+  projectTech5,
 }:ProjectProps) {
 
   const {isEnglish} = useContext(LangContext)
-
+  
   return (
-    <div className=''>
+    <div>
       <div 
-        className='flex flex-col lg:flex-row border-2 border-middleLight dark:border-middleDark
-          hover:border-blueColor duration-500 gap-10 p-4 bg-middleLight
-          dark:bg-middleDark max-w-max rounded-xl'>
-        <Image className='rounded-lg' src={projectImage} width={330} height={330} alt='Project Icon' />
-        <div className='w-80 flex flex-col justify-between'>
-          <div>
-          <h5 
-            className="text-start text-textLight dark:text-textDark 
-            text-2xl mb-3 font-bold"
-          >
-              {projectTitle}
-          </h5>
-          <p className=" text-textLight dark:text-textDark text-sm mb-3 text-justify">
-            {projectDescription}
-          </p>
-          <div className='flex flex-wrap gap-1'>
+        className='flex flex-col xl:flex-row flex-wrap items-center border-2 border-middleLight dark:border-middleDark
+          hover:border-blueColor duration-500 gap-4 p-4 bg-middleLight
+          dark:bg-middleDark rounded-xl'>
+        <Image className='rounded-lg' src={projectImage} width={280} height={280} alt='Project Icon' />
 
-            <p className="text-textDark py-1 px-2 bg-bgDark text-sm max-w-max rounded-md">
-              {projectTechnology}
+        <div className='w-72 flex flex-col justify-between'>
+          <div>
+            <h5 
+              className=" text-center text-textLight dark:text-textDark 
+              text-2xl mb-2 font-bold"
+            >
+                {projectTitle}
+            </h5>
+            <p className=" text-textLight dark:text-textDark text-sm mb-3 text-justify">
+              {projectDescription}
             </p>
           </div>
+          
+          <div 
+            className='flex justify-center xl:justify-start flex-wrap mt-5 gap-2'
+          >
+            <h1 className='text-base text-bgLight border-b-2 font-bold border-b-blueColor'>
+              {projectTech1}
+            </h1>
+            <h1 className='text-base text-bgLight border-b-2 font-bold border-b-blueColor'>
+              {projectTech2}
+            </h1>
+            <h1 className='text-base text-bgLight border-b-2 font-bold border-b-blueColor'>
+              {projectTech3}
+            </h1>
+            <h1 className='text-base text-bgLight border-b-2 font-bold border-b-blueColor'>
+              {projectTech4}
+            </h1>
+            <h1 className='text-base text-bgLight border-b-2 font-bold border-b-blueColor'>
+              {projectTech5}
+            </h1>
           </div>
-          <div className='mt-11 lg:mt-0 flex justify-between'>
+           
+          <div className='mt-11 flex justify-between'>
             <a 
               className="border-2 border-blueColor bg-blueColor hover:bg-blueColorHover
                 duration-300 font-bold text-textDark text-base bg-none 
-                max-w-max py-3 px-9 rounded-xl"
+                py-3 px-8 rounded-xl text-center"
               href={projectSiteLink}
               target='_blank'
             >
@@ -62,7 +85,7 @@ export default function Project({
             <a 
               className="border-2 border-blueColor b hover:bg-blueColorHover
               hover:text-textDark duration-300 font-bold text-textLight dark:text-textDark text-base bg-none 
-                max-w-max py-3 px-9 rounded-xl "
+                py-3 px-8 rounded-xl text-center"
               href={projectCodeLink}
               target='_blank'
             >
