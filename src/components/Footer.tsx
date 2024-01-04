@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="flex flex-col xl:flex-row xl:gap-10 px-5 justify-around items-center">
         <div className="text-center ">
           <h1 className="text-textLight dark:text-textDark text-5xl lg:text-7xl font-bold">Dilley Andrade</h1>
-          <h5 className="text-blueColor text-base lg:text-2xl mt-3">Dev FullStack | React/Nodejs | Linux | DevOps</h5>
+          <h5 className="text-blueColor text-base lg:text-2xl mt-3">Dev FullStack | ReactJs | NodeJs | Linux</h5>
           <div>
             <div className="flex justify-center gap-6 mt-5 mb-9">
               <a href="https://www.linkedin.com/in/dilley-andrade/"target="_blank">

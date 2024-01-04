@@ -16,10 +16,6 @@ export const listSkills = [
     name: 'Next'
   },
   {
-    image: '/skills/cssmodulesLogo.png',
-    name: 'Css Module'
-  },
-  {
     image: '/skills/sassLogo.png',
     name: 'Sass/Scss'
   },
@@ -58,14 +54,6 @@ export const listSkills = [
   {
     image: '/skills/linuxLogo.png',
     name: 'Linus System'
-  },
-  {
-    image: '/skills/shellLogo.png',
-    name: 'Shell Script'
-  },
-  {
-    image: '/skills/vimLogo.png',
-    name: 'Vim'
   },
   {
     image: '/skills/gitLogo.png',

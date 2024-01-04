@@ -58,7 +58,7 @@ export default function HomePageMobile() {
             <h5 
               className="text-center text-textLight dark:text-textDark text-base"
             >
-              Dev FullStack | React/Nodejs | Linux | DevOps
+              Dev FullStack | ReactJs | NodeJs | Linux
             </h5>
           </div>
           <Image src="/myPhoto.png" width={400} height={300} alt="My Image" />
@@ -79,7 +79,7 @@ export default function HomePageMobile() {
           <h5 
             className="text-center md:text-start text-textLight dark:text-textDark text-base"
           >
-            Dev FullStack | React/Nodejs | Linux | DevOps
+            Dev FullStack | ReactJs | NodeJs | Linux
           </h5>
           <a className="border-2 text-center border-blueColor text-textLight dark:text-textDark
             text-2xl bg-none  py-3 mt-5 rounded-xl hover:bg-blueColor duration-300"

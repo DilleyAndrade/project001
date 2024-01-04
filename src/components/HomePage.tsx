@@ -31,7 +31,7 @@ export default function HomePage() {
           <h5 
             className="text-center text-textLight dark:text-textDark text-xl 2xl:text-2xl"
           >
-            Dev FullStack | React/Nodejs | Linux | DevOps
+            Dev FullStack | ReactJs | NodeJs | Linux
           </h5>
         </div>
         <Image src="/myPhoto.png" width={400} height={300} style={{width:'90%' , height:'auto%'}} alt="My Image" />
@@ -71,7 +71,7 @@ export default function HomePage() {
           <h5
             className="text-start text-textLight dark:text-textDark text-2xl my-3"
           >
-            Dev FullStack | React/Nodejs | Linux | DevOps
+            Dev FullStack | ReactJs | NodeJs | Linux
           </h5>
         </div>
         

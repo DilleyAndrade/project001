@@ -40,12 +40,12 @@ export default function MainServices() {
               }
             />
             <Services
-              serviceImage="/devOps.svg"
-              serviceTitle="DevOps"
+              serviceImage="/microservice.svg"
+              serviceTitle="Microservices"
               serviceDescription=
               {isEnglish
-                ? 'The perfect synergy between automation, infrastructure and continuous processes. Always maintaining constant learning.'
-                : 'A sinergia perfeita entre automação, infraestrutura e processos contínuos. Sempre mantendo o aprendizado constante.'
+                ? 'Microservices represent an innovative architectural approach to software development.'
+                : 'Os microsserviços, representam uma abordagem arquitetônica inovadora no desenvolvimento de software.'
               }
             />
             <Services

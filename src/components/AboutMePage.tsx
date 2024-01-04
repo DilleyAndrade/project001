@@ -64,7 +64,7 @@ export default function AboutMePage() {
 
           <div className='px-5 flex flex-col text-center gap-4 lg:items-center 2xl:items-start  text-textLight dark:text-textDark text-xl'>
             <h4 className='flex lg:flex-row flex-col mb-2 lg:mb-0 lg:gap-2'><b>{isEnglish ? 'Name' : 'Nome'}:</b>Dilley Andrade</h4>
-            <h4 className='flex lg:flex-row flex-col mb-2 lg:mb-0 lg:gap-2'><b>{isEnglish ? 'Area' : 'Área'}:</b> Dev Fullstack | Devops</h4>
+            <h4 className='flex lg:flex-row flex-col mb-2 lg:mb-0 lg:gap-2'><b>{isEnglish ? 'Area' : 'Área'}:</b> Dev Fullstack | ReactJs | NodeJs | Linux</h4>
             <h4 className='flex lg:flex-row flex-col mb-2 lg:mb-0 lg:gap-2'><b>{isEnglish ? 'Current residence' : 'Residência atual'}:</b>Bra{isEnglish ? 'z' : 's'}il</h4>
             <h4 className='flex lg:flex-row flex-col mb-2 lg:mb-0 lg:gap-2'><b>Email:</b>dilleyandrade@gmail.com</h4>
             <h4 className='flex lg:flex-row flex-col mb-2 lg:mb-0 lg:gap-2'><b>Github:</b>github.com/DilleyAndrade</h4>

@@ -21,7 +21,6 @@ export default function Home() {
         <Menu />
         <IsOpenMenuMobile.Provider value={{setMenuMobileIsOpen}}>
           {menuMobileIsOpen && <MenuMobile /> }
-          
           <MainPage />
         </IsOpenMenuMobile.Provider>
       </LangContext.Provider>
