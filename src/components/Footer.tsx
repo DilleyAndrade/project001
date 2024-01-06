@@ -4,7 +4,7 @@ import { useContext } from "react";
 
 export default function Footer() {
 
-  const {isEnglish} = useContext(LangContext)
+  const {isEnglish} = useContext<any>(LangContext)
 
   return (
     <div id="contacts">
@@ -47,49 +47,7 @@ export default function Footer() {
           </div>
         </div>
       
-        <div className="bg-menuLight mt-8 w-9/12 xl:w-6/12 p-9 relative rounded-t-xl">
-          <div>
-            <h2 className="text-textLight text-center mb-14 text-5xl border-blueColor pb-2 border-b-4 font-bold">
-              {isEnglish ? 'Talk to me' : 'Fale comigo'}
-            </h2>
-            <form className="flex flex-col">
-
-              <label htmlFor="companyName" className="text-2xl mb-2">
-                {isEnglish ? 'What is your name/company?' : 'Qual seu nome/empresa?'}
-              </label>
-              <input
-                className="border-b-2 mb-12 outline-none focus:border-blueColor duration-300"
-                id="companyName"
-                type="text"
-              />
-
-              <label htmlFor="contactName" className="text-2xl mb-2">
-                {isEnglish ? 'What is your contact?' : 'Qual o seu contato?'}
-              </label>
-              <input
-                className="border-b-2 mb-12 outline-none focus:border-blueColor duration-300"
-                id="contactName"
-                type="text"
-              />
-
-              <label htmlFor="message" className="text-2xl mb-2">
-                {isEnglish ? 'Write your message' : 'Escreva sua mensagem'}
-              </label>
-              <textarea 
-                id="message" 
-                rows="5" 
-                className="border-2 outline-none focus:border-blueColor indent-1 p-2 duration-300 rounded-xl"
-              />
-              <button className="border-2 text-center mt-7 border-blueColor bg-blueColor hover:bg-blueColorHover duration-300 font-bold text-textDark text-xl 
-                w-full  py-3 px-9 rounded-xl "
-              >
-                {isEnglish ? 'Send message' : 'Enviar mensagem'}
-                
-              </button>
-            </form>
-          </div>
-          <div className="w-2/4 h-2/4 border-l-8 border-b-8 border-blueColor absolute -left-2 -bottom-2 "></div>
-        </div>
+        
         
       </div>
       

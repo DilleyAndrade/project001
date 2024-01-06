@@ -6,7 +6,7 @@ import{motion} from 'framer-motion'
 
 export default function AboutMePage() {
 
-  const { isEnglish } = useContext(LangContext)
+  const { isEnglish } = useContext<any>(LangContext)
 
   return (
   

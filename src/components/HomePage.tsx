@@ -1,17 +1,13 @@
 import Image from "next/image";
-import Titles from "./Titles";
-import Services from "./Services";
 import { useContext } from "react";
 import { LangContext } from "@/context/langContext";
 import {motion} from 'framer-motion'
-import { List } from "@phosphor-icons/react/dist/ssr";
 
 export default function HomePage() {
 
-  const { isEnglish, setIsEnglish } = useContext(LangContext)
+  const { isEnglish, setIsEnglish } = useContext<any>(LangContext)
 
   return (
-   
     <main id="start" className="hidden lg:flex flex-col lg:flex-row overflow-hidden mb-10 w-full h-5/6">
     
       <motion.div 
@@ -34,7 +30,7 @@ export default function HomePage() {
             Dev FullStack | ReactJs | NodeJs | Linux
           </h5>
         </div>
-        <Image src="/myPhoto.png" width={400} height={300} style={{width:'90%' , height:'auto%'}} alt="My Image" />
+        <Image src="/myPhoto.png" width={400} height={300} style={{width:'90%' , height:'auto%'}} alt="My Image" priority/>
       </motion.div>
 
       <motion.div 

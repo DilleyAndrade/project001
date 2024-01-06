@@ -7,7 +7,7 @@ import {motion} from 'framer-motion'
 
 export default function Menu() {
 
-  const { isEnglish } = useContext(LangContext)
+  const { isEnglish } = useContext<any>(LangContext)
 
   return (
 

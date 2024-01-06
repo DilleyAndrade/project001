@@ -13,7 +13,7 @@ export const projectList = [
   },
   {
     projectImage: '/projects/projectThumb.png',
-    projectTitle: 'Carros Ferozes',
+    projectTitle: 'Carros Ferozes 2',
     projectDescription: 'Mobile development with React Native is an increasingly popular approach to creating high-quality mobile apps.',
     projectSiteLink: 'http://www.google.com',
     projectCodeLink: 'http://www.github.com',
@@ -25,7 +25,7 @@ export const projectList = [
   },
   {
     projectImage: '/projects/projectThumb.png',
-    projectTitle: 'Carros Ferozes',
+    projectTitle: 'Carros Ferozes 3',
     projectDescription: 'Mobile development with React Native is an increasingly popular approach to creating high-quality mobile apps.',
     projectSiteLink: 'http://www.google.com',
     projectCodeLink: 'http://www.github.com',
@@ -37,7 +37,7 @@ export const projectList = [
   },
   {
     projectImage: '/projects/projectThumb.png',
-    projectTitle: 'Carros Ferozes',
+    projectTitle: 'Carros Ferozes 4',
     projectDescription: 'Mobile development with React Native is an increasingly popular approach to creating high-quality mobile apps.',
     projectSiteLink: 'http://www.google.com',
     projectCodeLink: 'http://www.github.com',

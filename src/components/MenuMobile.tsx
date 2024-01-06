@@ -7,9 +7,9 @@ import { useContext, useState } from "react";
 
 export default function MenuMobile({onCloseMenuMobile}:any) {
 
-  const { isEnglish } = useContext(LangContext)
+  const { isEnglish } = useContext<any>(LangContext)
 
-  const {menuMobileIsOpen, setMenuMobileIsOpen} = useContext(IsOpenMenuMobile)
+  const {menuMobileIsOpen, setMenuMobileIsOpen} = useContext<any>(IsOpenMenuMobile)
 
   return (
 
@@ -37,6 +37,7 @@ export default function MenuMobile({onCloseMenuMobile}:any) {
             height={50} 
             alt="Image Dilley"
             className="rounded-full"
+            priority
           />
           <h4 className="text-lg font-bold">
             Dilley Andrade

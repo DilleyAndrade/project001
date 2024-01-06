@@ -28,7 +28,7 @@ export default function Project({
   projectTech5,
 }:ProjectProps) {
 
-  const {isEnglish} = useContext(LangContext)
+  const {isEnglish} = useContext<any>(LangContext)
   
   return (
     <div>

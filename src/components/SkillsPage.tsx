@@ -7,7 +7,7 @@ import {motion} from 'framer-motion'
 
 export default function SkillsPage() {
 
-  const {isEnglish} = useContext(LangContext)
+  const {isEnglish} = useContext<any>(LangContext)
 
   const allSkills = listSkills
 

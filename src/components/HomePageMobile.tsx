@@ -8,8 +8,8 @@ import { List } from "@phosphor-icons/react/dist/ssr";
 
 export default function HomePageMobile() {
 
-  const { isEnglish, setIsEnglish } = useContext(LangContext)
-  const {setMenuMobileIsOpen} = useContext(IsOpenMenuMobile)
+  const { isEnglish, setIsEnglish } = useContext<any>(LangContext)
+  const {setMenuMobileIsOpen} = useContext<any>(IsOpenMenuMobile)
 
   return (
    
@@ -61,7 +61,7 @@ export default function HomePageMobile() {
               Dev FullStack | ReactJs | NodeJs | Linux
             </h5>
           </div>
-          <Image src="/myPhoto.png" width={400} height={300} alt="My Image" />
+          <Image src="/myPhoto.png" width={400} height={300} alt="My Image" priority/>
         </div>
         
         <motion.div 

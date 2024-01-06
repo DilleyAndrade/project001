@@ -11,8 +11,8 @@ import Menu from "@/components/Menu";
 
 export default function Home() {
 
-  const [isEnglish, setIsEnglish] = useState(false)
-  const [menuMobileIsOpen, setMenuMobileIsOpen] = useState(false)
+  const [isEnglish, setIsEnglish] = useState<any>(false)
+  const [menuMobileIsOpen, setMenuMobileIsOpen] = useState<any>(false)
 
  
   return (

@@ -6,7 +6,7 @@ import Services from './Services'
 
 export default function MainServices() {
 
-  const {isEnglish} = useContext(LangContext)
+  const {isEnglish} = useContext<any>(LangContext)
 
   return (
     <div className='pt-8'>

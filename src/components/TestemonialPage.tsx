@@ -8,7 +8,7 @@ import {motion} from 'framer-motion'
 
 export default function Testemonial() {
 
-  const { isEnglish } = useContext(LangContext)
+  const { isEnglish } = useContext<any>(LangContext)
 
   const allComments = commentList
 
